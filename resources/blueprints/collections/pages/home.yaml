@@ -1,0 +1,52 @@
+title: Home
+sections:
+  main:
+    display: Main
+    fields:
+      - handle: title
+        field:
+          character_limit: 0
+          type: text
+          localizable: false
+          display: Title
+      - handle: subtitle
+        field:
+          character_limit: 0
+          type: text
+          localizable: false
+          display: Subtitle
+      - handle: content
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: true
+          smartypants: false
+          type: markdown
+          localizable: false
+          display: Content
+      - handle: template
+        field:
+          type: template
+          localizable: false
+          display: Template
+      - handle: welcome-text-begin
+        field:
+          character_limit: 0
+          type: text
+          localizable: false
+          display: text-begin
+          
+      - handle: welcome-text-end
+        field:
+          character_limit: 0
+          type: text
+          localizable: false
+          display: text-end
+          
+      - handle: side-aanmeld-text
+        field:
+          character_limit: 0
+          type: text
+          localizable: false
+          display: side aanmeld text

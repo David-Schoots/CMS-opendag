@@ -1,0 +1,71 @@
+<div class="grid grid-cols-5 grid-rows-1 gap-4">
+    <div class="col-span-5">
+        <nav class="flex items-center justify-between py-10 max-w-7xl bg-white text-black mx-auto">
+            <!-- Logo -->
+            <a href="/" class="text-xl font-black">
+                <img src="assets/content/logo.png" alt="Logo" class="w-32 sm:w-64 mx-auto" />
+            </a>
+            
+            <!-- Sign-up Button and Hamburger Menu -->
+            <div class="flex items-center">
+                <button type="button" class="mr-5 text-black border-black border-2 rounded-full px-5 py-3.5 text-sm font-medium inline-flex items-center hover:bg-gray-200">
+                    Meld je aan
+                </button>
+            
+            <div class="hamburger">
+                <!-- Hamburger Menu -->
+                <div class="block">
+                    <!-- Open Menu Button -->
+                    <button class="flex items-center px-3 text-black" x-bind:class="{'hidden': showMobileNav}" @click="showMobileNav = true" aria-label="Open Menu">
+                        <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Open Menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                        </svg>
+                    </button>
+    
+                    <!-- Close Menu Button (appears when menu is open) -->
+                    <button class="items-center px-3 text-white hidden" x-bind:class="{'flex': showMobileNav, 'hidden': !showMobileNav}" @click="showMobileNav = false" aria-label="Close Menu" x-cloak>
+                        <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Close Menu</title>
+                            <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
+                        </svg>
+                    </button>
+                </div>
+    
+                <!-- Full-Screen Menu (Opens when hamburger is clicked) -->
+                <div class="absolute top-0 left-0 w-full h-full bg-black text-white z-50" x-show="showMobileNav" x-transition @click.outside="showMobileNav = false">
+                    <div class="flex flex-col justify-center items-center h-full space-y-12 relative">
+                        <!-- Close Button in Full-Screen Menu -->
+                        <button class="absolute top-4 right-1 text-white" @click="showMobileNav = false" aria-label="Close Menu">
+                            <svg class="fill-current h-8 w-8" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <title>Close Menu</title>
+                                <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
+                            </svg>
+                        </button>
+    
+                        <!-- Menu Items -->
+                        <div class="flex items-center justify-between w-full max-w-2xl">
+                            <div class="text-6xl font-bold">Home <span class="text-xl">(01)</span></div>
+                            <button class="border border-white rounded-full p-3" aria-label="Next">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+    
+                        <div class="flex items-center justify-between w-full max-w-2xl">
+                            <div class="text-6xl font-bold">Werk <span class="text-xl">(02)</span></div>
+                            <button class="border border-white rounded-full p-3" aria-label="Next">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </div>
+</div>
+

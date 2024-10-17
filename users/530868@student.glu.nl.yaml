@@ -1,0 +1,8 @@
+super: true
+name: David
+id: 65e9a1f5-de36-47f6-bef8-da972e79939c
+password_hash: $2y$12$DxN/AmkfQwe97KLg0oPmR.2DKwrGMyybem8uzgHV95FjESOZYgloC
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing
