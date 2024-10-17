@@ -5,67 +5,32 @@
         <h1 class="text-gray-400 text-4xl lg:text-7xl mb-10">{{welcome-text-end}}</h1>
     </article>
 
-        <!-- Button and Additional Text -->
-    <div class="flex flex-col lg:flex-row items-start lg:items-center">
+    <!-- Button and Additional Text -->
+    <div class="flex flex-col lg:flex-row lg:justify-between items-start lg:items-center w-full">
         <!-- Sign-up Button -->
-        <button type="button" class="mr-5 mb-4 lg:mb-0 text-white bg-black border-black border-2 rounded-full px-5 py-3.5 text-sm font-medium inline-flex items-center hover:bg-gray-200">
+        <button type="button" class="w-2/5 lg:w-auto mr-0  lg:mr-5 mb-4 lg:mb-0 text-white bg-black border-black border-2 rounded-full px-5 py-3.5 text-sm font-medium inline-flex items-center justify-center hover:bg-gray-200">
             Meld je aan
         </button>
 
         <!-- Text Container -->
-        <div class="text-gray-400 ml-5 w-4/12 text-base lg:text-lg">
+        <div class="text-gray-400 w-full lg:w-4/12 text-base lg:text-lg lg:ml-auto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare pharetra mi, vel.
         </div>
     </div>
 </div>
-
+</div>
 
 <!-- Work / Projects Students -->
 <h2 class="font-semibold text-3xl max-w-7xl mx-auto px-4 lg:px-0">Werk studenten</h2>
 <!-- Card with the projects -->
 <div class="flex flex-wrap max-w-7xl mx-auto lg:pt-10 px-4 lg:px-0">
-    <div class="w-full sm:w-6/12 lg:w-6/12 p-2"> <!-- Maximaal 2 projecten op een lijn -->
-        <a href="/" class="block mb-4">
-            <img src="assets/content/Sportly.png" alt="App Preview" class="rounded-lg w-full" />
-        </a>
-        <div class="flex items-start justify-between mt-4"> <!-- Flex container voor projectnaam en knop -->
-            <div>
-                <h2 class="font-semibold text-2xl mb-2">Sportly</h2>
-                <p class="text-sm text-gray-600">Mobile App Design</p>
-            </div>
-            <div class="ml-4"> <!-- Extra margin om de knop iets van de tekst te scheiden -->
-                <button type="button" class="bg-white text-black border-black border-2 rounded-full px-4 py-2 hover:bg-gray-200 transition-all duration-300 ease-in-out">
-                    <svg class="rtl:rotate-180 w-4 h-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                    </svg>
-                </button>
-            </div>
-        </div>
+    {{ partial:project }}
+    {{ partial:project }}
+    {{ partial:project }}
+    {{ partial:project }}
     </div>
 
-    <!-- Tweede project -->
-    <div class="w-full sm:w-6/12 lg:w-6/12 p-2"> <!-- Maximaal 2 projecten op een lijn -->
-        <a href="/" class="block mb-4">
-            <img src="assets/content/Sportly.png" alt="App Preview" class="rounded-lg w-full" />
-        </a>
-        <div class="flex items-start justify-between mt-4"> <!-- Flex container voor projectnaam en knop -->
-            <div>
-                <h2 class="font-semibold text-2xl mb-2">Project 2</h2>
-                <p class="text-sm text-gray-600">Project Description</p>
-            </div>
-            <div class="ml-4"> <!-- Extra margin om de knop iets van de tekst te scheiden -->
-                <button type="button" class="bg-white text-black border-black border-2 rounded-full px-4 py-2 hover:bg-gray-200 transition-all duration-300 ease-in-out">
-                    <svg class="rtl:rotate-180 w-4 h-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
- <div class="flex flex-col items-center max-w-7xl mx-auto pt-8 mt-8 border-t-2  border-gray-500">
+<div class="flex flex-col items-center max-w-7xl mx-auto pt-8 mt-8 border-t-2 border-gray-500">
     <h2 class="font-medium text-2xl lg:text-3xl lg:mt-12">Enthousiast geworden?!</h2>
     <a href="/">
         <div class="flex items-center mt-8">
@@ -74,5 +39,3 @@
         </div>
     </a>
 </div>
-
-
