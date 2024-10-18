@@ -24,10 +24,11 @@
 <h2 class="font-semibold text-3xl max-w-7xl mx-auto px-4 lg:px-0">Werk studenten</h2>
 <!-- Card with the projects -->
 <div class="flex flex-wrap max-w-7xl mx-auto lg:pt-10 px-4 lg:px-0">
-    {{ partial:project }}
-    {{ partial:project }}
-    {{ partial:project }}
-    {{ partial:project }}
+    {{ collection:articles slug="{slug}" }}
+        {{ partial:project }}
+    {{ /collection:articles }}
+
+
     </div>
 
 <div class="flex flex-col items-center max-w-7xl mx-auto pt-8 mt-8 border-t-2 border-gray-500">

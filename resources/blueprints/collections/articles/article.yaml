@@ -5,14 +5,7 @@ tabs:
     sections:
       -
         fields:
-          -
-            handle: title
-            field:
-              type: text
-              required: true
-              display: Title
-              validate:
-                - required
+                  
           -
             handle: content
             field:
