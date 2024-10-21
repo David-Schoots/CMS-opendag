@@ -1,8 +1,18 @@
-<div class="container mx-auto">
-    <h1 class="text-4xl font-bold">{{ content:title }}</h1>
-    <img src="{{ content:feature_image }}" alt="{{ content:title }}" class="w-full rounded-lg" />
-    <div class="mt-4">
-        {{ content:content }} <!-- Zorg ervoor dat je de inhoud hier weergeeft -->
+
+ <div class="max-w-3xl mx-auto p-6">
+    <div class="mb-6 text-center">
+        <h1 class="text-4xl font-extrabold mb-2 text-gray-800">{{ content:title }}</h1>
+        <p class="text-gray-500 text-lg">Made By: {{ content:name-student }}</p>
+        <img src="{{ content:assets_field }}" alt="{{ content:title }}" class="mx-auto mt-3 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-lg">
     </div>
-    <a href="/" class="text-blue-500 mt-4 inline-block">Terug naar de homepage</a>
+    
+
+    <div class="prose">
+        {{{content:content | markdown }}}
+    </div>
+    
+    <a href="/" class="bg-white text-black border-black border-2 rounded-full px-4 py-2 hover:bg-gray-200 transition-all duration-300 ease-in-out inline-block">Terug naar Hoofdmenu</a>
 </div>
+
+
+

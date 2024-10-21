@@ -5,22 +5,30 @@ tabs:
     sections:
       -
         fields:
-                  
           -
             handle: content
             field:
               type: markdown
               display: Content
+
+          -
+            handle: name-student
+            field:
+              type: text
+              display: 'Name Student'
+              character_limit: 0 
+
           -
             handle: assets_field
             field:
-              max_files: 1
-              min_files: 1
-              container: assets
               type: assets
               display: 'Project Photo'
+              container: assets
+              max_files: 1
+              min_files: 1
               validate:
                 - required
+              
           -
             handle: project_type
             field:
@@ -28,6 +36,7 @@ tabs:
               display: 'Project Type'
               validate:
                 - required
+
   sidebar:
     display: Sidebar
     sections:

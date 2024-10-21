@@ -107,3 +107,20 @@ h1 {
         }
     }
 }
+
+.prose ul {
+    list-style-type:disc;
+    padding-left: 40px;
+    margin-top: 10px;
+}
+
+.prose p {
+    margin: 1em;
+}
+
+.prose ol {
+    list-style-type:upper-roman;
+    padding-left: 40px;
+    margin-top: 10px;
+}
+
