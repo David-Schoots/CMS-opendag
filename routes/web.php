@@ -21,3 +21,10 @@ Route::get('articles/{slug}', function ($slug) {
 });
 
 
+Route::get('pages/register', function (){
+   
+    return (new \Statamic\View\View)->template('register')->layout('layout');
+});
+
+
+

@@ -1,0 +1,25 @@
+fields:
+  -
+    handle: name
+    field:
+      display: Name
+      type: text
+      validate: required
+  -
+    handle: age
+    field:
+      display: Age
+      type: text
+      validate: required|integer
+  -
+    handle: adoration
+    field:
+      display: Level of Adoration
+      type: text
+      validate: required
+  -
+    handle: comment
+    field:
+      display: Comment
+      type: textarea
+      validate: required
