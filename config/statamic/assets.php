@@ -14,8 +14,8 @@ return [
         |
         */
 
-        'route' => 'img',
 
+        'route' => 'img',  // Zorg ervoor dat deze is ingesteld op een geldig pad
         /*
         |--------------------------------------------------------------------------
         | Require Glide security token
