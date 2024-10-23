@@ -2,3 +2,12 @@
 @import "style";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+.full-img-block{
+    height: 350px;
+    width:100%;
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    border-radius:10px;
+}

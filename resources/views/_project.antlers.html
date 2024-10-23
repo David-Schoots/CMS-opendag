@@ -1,12 +1,8 @@
 <!-- partial:project in home.antlers for showing the projects  -->
 <div class="w-full sm:w-6/12 lg:w-6/12 p-2">
-    <a href="/articles/{{ slug }}" class="block mb-4">
-        <img src="{{ glide:content:assets_field}}" width="507" height="270" fit="contain" alt="{{ content:title }}" class="rounded-lg w-full shadow-lg hover:shadow-xl transition-shadow duration-300">
-        {{ glide:assets_field width="507" height="270" fit="contain" }} <!-- Geeft de gegenereerde URL weer -->
-
-
-     <!-- <img src="{{assets_field}}" alt="App Preview" class="rounded-lg w-full" /> -->
-   </a>
+    <a href="/articles/{{ slug }}" style="background-image: url('{{ assets_field }}');" class="block full-img-block mb-4">
+        <!-- Voeg hier inhoud toe, zoals tekst of een icoon -->
+    </a>
     <div class="flex items-start justify-between mt-4">
         <div>
             <h2 class="font-semibold text-2xl mb-2">{{title}}</h2>
