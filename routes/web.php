@@ -20,13 +20,16 @@ Route::get('articles/{slug}', function ($slug) {
     // Geeft de detail view weer en stuurt de gevonden content mee
     /* de content is de word meegestuurd naar de pagina */
     // return view('detail', ['content' => $search]);
-    return (new \Statamic\View\View)->template('detail')->layout('layout')->with([' ' => $search]);
+    return (new \Statamic\View\View)->template('detail')->layout('layout')->with(['content' => $search]);
 });
 
 
 Route::get('pages/register', function (){
-   
-    return (new \Statamic\View\View)->template('register')->layout('layout');
+    $success = false;
+    if (isset($_GET['success'])){
+        $success = true;
+    }
+    return (new \Statamic\View\View)->template('register')->layout('layout')->with(['success' => $success]);
 });
 
 /* Alle projecten pagina (overzichts pagina) */

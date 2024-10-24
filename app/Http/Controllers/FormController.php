@@ -24,6 +24,6 @@ class FormController extends Controller
 
         // Redirect naar een andere pagina met een succesmelding
        /*  return redirect()->route('pages/register')->with('success', 'Aanmelding succesvol!'); */
-        return redirect ('pages/register')->with('success', 'Aanmelding successvol!');
+        return redirect ('pages/register?success=true') ;
     }
 }

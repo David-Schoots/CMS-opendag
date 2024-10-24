@@ -53,4 +53,8 @@ return [
 
     'middleware' => 'web',
 
+    'routes' => [
+        '/' => 'collection:home'
+    ]
+
 ];

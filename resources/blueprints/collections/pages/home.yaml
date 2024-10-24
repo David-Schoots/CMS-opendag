@@ -1,52 +1,87 @@
 title: Home
-sections:
+tabs:
   main:
     display: Main
-    fields:
-      - handle: title
-        field:
-          character_limit: 0
-          type: text
-          localizable: false
-          display: Title
-      - handle: subtitle
-        field:
-          character_limit: 0
-          type: text
-          localizable: false
-          display: Subtitle
-      - handle: content
-        field:
-          restrict: false
-          automatic_line_breaks: true
-          automatic_links: false
-          escape_markup: true
-          smartypants: false
-          type: markdown
-          localizable: false
-          display: Content
-      - handle: template
-        field:
-          type: template
-          localizable: false
-          display: Template
-      - handle: welcome-text-begin
-        field:
-          character_limit: 0
-          type: text
-          localizable: false
-          display: text-begin
-          
-      - handle: welcome-text-end
-        field:
-          character_limit: 0
-          type: text
-          localizable: false
-          display: text-end
-          
-      - handle: side-aanmeld-text
-        field:
-          character_limit: 0
-          type: text
-          localizable: false
-          display: side aanmeld text
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              character_limit: 0
+              display: Title
+              validate:
+                - required
+          -
+            handle: subtitle
+            field:
+              character_limit: 0
+              type: text
+              display: Subtitle
+          -
+            handle: content
+            field:
+              escape_markup: true
+              type: markdown
+              display: Content
+          -
+            handle: assets_field
+            field:
+              container: assets
+              type: assets
+              display: 'Assets Field'
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+          -
+            handle: welcome_text_begin
+            field:
+              character_limit: 0
+              type: text
+              display: welcome-text-begin
+          -
+            handle: welcome_text_end
+            field:
+              character_limit: 0
+              type: text
+              display: welcome-text-end
+          -
+            handle: side_aanmeld_text
+            field:
+              character_limit: 0
+              type: text
+              display: side-aanmeld-text
+          -
+            handle: webdev_text
+            field:
+              type: text
+              display: webdev_text
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
+  new_tab:
+    display: 'New Tab'
+    sections:
+      -
+        display: 'New Section'

@@ -1,18 +1,14 @@
+<div class="flex items-center justify-center">
+    <h2 class="text-xl font-bold">Aanmelden</h2>
+</div>
 <form action="{{ route:form.submit }}" method="POST" class="bg-white rounded-lg shadow-md p-6 w-full max-w-lg sm:w-96 sm:mx-auto">
-    {{ csrf_field }} <!-- Dit voegt een CSRF-token toe voor beveiliging -->
-    
-    {{ if flash:success }}
+
+    {{ csrf_field }}
+    {{ if success }}
     <div class="bg-green-500 text-white p-4 rounded mb-4">
-        {{ flash:success }} <!-- Dit is het succesbericht -->
+        Aanmelden gelukt
     </div>
     {{ /if }}
-
-    {{ if flash:error }} <!-- Voeg deze sectie toe voor eventuele foutmeldingen -->
-    <div class="bg-red-500 text-white p-4 rounded mb-4">
-        {{ flash:error }}
-    </div>
-    {{ /if }}
-
 
 
     <div class="mb-4">
