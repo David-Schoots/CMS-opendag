@@ -1,7 +1,7 @@
 super: true
 name: David
 id: 65e9a1f5-de36-47f6-bef8-da972e79939c
-password_hash: $2y$12$DxN/AmkfQwe97KLg0oPmR.2DKwrGMyybem8uzgHV95FjESOZYgloC
+password_hash: $2y$12$Yj0cqIULk1BZkjhlltSan.Xnd/msDIPuM4tZZXLRKlhQaj3YVYYj2
 preferences:
   collections:
     pages:

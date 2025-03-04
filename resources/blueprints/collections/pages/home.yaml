@@ -38,28 +38,23 @@ tabs:
               type: template
               display: Template
           -
-            handle: welcome_text_begin
+            handle: Hero
             field:
               character_limit: 0
               type: text
-              display: welcome-text-begin
+              display: Hero
           -
-            handle: welcome_text_end
+            handle: Hero-bottom
             field:
               character_limit: 0
               type: text
-              display: welcome-text-end
+              display: Hero Bottom
           -
-            handle: side_aanmeld_text
+            handle: Hero-small-text
             field:
               character_limit: 0
               type: text
-              display: side-aanmeld-text
-          -
-            handle: webdev_text
-            field:
-              type: text
-              display: webdev_text
+              display: Hero-small-text
   sidebar:
     display: Sidebar
     sections:
