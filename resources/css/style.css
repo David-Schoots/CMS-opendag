@@ -96,7 +96,7 @@ h1 {
 
 
 /* Responsive Wangjangling */
-@screen lg {
+@media (width >= theme(--breakpoint-lg)) {
     h1 {
         @apply text-6xl;
     }
