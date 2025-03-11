@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Statamic\Facades\Entry;
 use Statamic\Facades\Content;
 use App\Http\Controllers\FormController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 
 
@@ -23,24 +25,35 @@ Route::get('articles/{slug}', function ($slug) {
     return (new \Statamic\View\View)->template('detail')->layout('layout')->with(['content' => $search]);
 });
 
-
-Route::get('pages/register', function (){
-    $success = false;
-    if (isset($_GET['success'])){
-        $success = true;
-    }
-    return (new \Statamic\View\View)->template('register')->layout('layout')->with(['success' => $success]);
-});
-
 /* Alle projecten pagina (overzichts pagina) */
-Route::get('pages/projects', function (){
+Route::get('projects', function (){
    
     return (new \Statamic\View\View)->template('projects')->layout('layout');
 });
 
 
-// Route voor het indienen van het formulier
-Route::post('/form-submit', [FormController::class, 'submit'])->name('form.submit');
+Route::get('login', function (){
+   
+    return (new \Statamic\View\View)->template('admin')->layout('layout');
+});
 
 
+// Login formulier verwerken
 
+Route::post('login', function (Request $request){
+    $logingegevnes = $request->only('email', 'pssword');
+
+    if(Auth::attempt($logingegevnes)){
+        return redirect('/dashbord');
+    }
+
+    return redirect('login')->withErrors(['Inloggegevens onjuist']);
+
+})->name('login');
+
+/* dashbordpagina allen ingelogde */
+
+Route::get('dashboard', function (){
+    return (new \Statamic\View\View)->template('dashboard')->layout('layout');
+
+});
